@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:fruits_ui/pages/fuit_page.dart';
+import 'package:fruits_ui/pages/popular.dart';
 
 final tabs = [
   'Avocado',
@@ -24,10 +25,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: tabs.length,
-        child: Scaffold(
-          body: SafeArea(
-            child: SingleChildScrollView(
+      length: tabs.length,
+      child: Scaffold(
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
                   SizedBox(height: 40),
@@ -69,10 +72,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       tabs: tabs,
                     ),
                   ),
+                  SizedBox(height: 20),
+                  PopularFruits(),
                 ],
               ),
             ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
