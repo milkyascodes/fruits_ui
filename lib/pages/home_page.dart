@@ -81,27 +81,21 @@ class TabNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 100,
-          child: AppBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            bottom: TabBar(
-              isScrollable: true,
-              labelColor: Colors.black,
-              unselectedLabelColor: Colors.grey,
-              indicatorColor: Colors.green,
-              labelStyle: TextStyle(fontSize: 18),
-              tabs: [
-                for (final tab in tabs)
-                  FittedBox(
-                    child: Tab(
-                      text: tab,
-                    ),
-                  ),
-              ],
-            ),
-          ),
+        SizedBox(height: 30),
+        TabBar(
+          isScrollable: true,
+          labelColor: Colors.black,
+          unselectedLabelColor: Colors.grey,
+          indicatorColor: Colors.green,
+          labelStyle: TextStyle(fontSize: 18),
+          tabs: [
+            for (final tab in tabs)
+              FittedBox(
+                child: Tab(
+                  text: tab,
+                ),
+              ),
+          ],
         ),
         Expanded(
           child: TabBarView(
