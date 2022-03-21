@@ -15,31 +15,42 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: ListView(
         children: [
           SizedBox(height: 20),
-          Row(children: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-            Container(
-              height: 50,
-              width: 200,
-              decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(25)),
-              child: TextField(
-                decoration: InputDecoration(
-                    border: InputBorder.none,
-                    contentPadding: EdgeInsets.only(top: 15),
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: Colors.grey,
-                    )),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.menu,
+                    color: Colors.grey,
+                  )),
+              Container(
+                height: 50,
+                width: 200,
+                decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(25)),
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.only(top: 15),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Colors.grey,
+                      )),
+                ),
               ),
-            ),
-          ])
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.grey,
+                  ))
+            ],
+          )
         ],
       ),
     );
